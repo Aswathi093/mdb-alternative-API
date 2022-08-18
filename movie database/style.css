@@ -1,0 +1,106 @@
+*{
+    box-sizing:border-box;
+}
+header{
+    padding: 1rem;
+    display:flex;
+    justify-content:flex-end;
+    background-color: aqua;
+}
+body{
+    margin:10px;
+    background-color: #DEF2F1;
+}
+main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+.cards{
+    /* width:200px;
+    height:300px;
+    margin:1rem;
+    border-radius:3px;
+    position:relative;
+    overflow: hidden; */
+    
+    width: 260px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transform: translateZ(-130px);
+    margin:1rem;
+    border-radius:3px;
+    position:relative;
+    overflow: hidden;
+    
+}
+.cards:hover {
+	transform: rotateY(-50deg) translateZ(20px);
+}
+.cards .movieinfo {
+    transform: rotateY(90deg) translateZ(130px);
+    border: 1px solid #B8B5B5;
+    font-size: 0.75em;
+  }
+  /* .movieinfo {
+    color: #FFF;
+    padding: 7px 7px;
+    font-weight: bold;
+    height: 195px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-shadow: 0px 1px 1px rgba(0,0,0,1);
+  }  */
+  
+  .movieinfo h3 {
+    margin: 0 0 2px;
+    font-size: 1.4em;
+  }
+  .rating {
+    border: 1px solid #FFF;
+    padding: 0px 3px;
+  }
+  .description {
+    padding: 1.2em 1.4em;
+    margin: 2px 0 0;
+    font-weight: 700;
+    color: #666;
+    line-height: 1.4em;
+    border-top: 10px solid #555;
+  }
+  .cards .movieinfo .rating {
+  transition: box-shadow 350ms;
+}
+.cards {
+    box-shadow: inset 0px 0px 40px rgba(255,255,255,0);
+  }
+  .cards:hover img {
+    box-shadow: inset 300px 0px 40px rgba(255,255,255,0.8);
+  }
+.cards img{
+    width:100%;
+}
+.movieinfo{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+.cards:hover .movieinfo{
+  box-shadow: inset 0px 0px 40px rgba(0,0,0,0);
+}
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: #3AAFA9;
+    outline: 1px solid rgb(234, 190, 242);
+  }
+  
+  
+  
