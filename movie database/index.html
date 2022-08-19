@@ -5,25 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Database</title>
-    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
 </head>
-<body>
-    <header>
-        <div class="logo">Movie Database</div>
-        <nav>
-            <ul>
-                <li><a href="#">Bollywood</a></li>
-                <li><a href="#">Tollywood</a></li>
-                <li><a href="#">Hollywood</a></li>
+<header>
+     <nav>
+        <div><img id="logo"src="camera.png"alt= "logo"> </div>
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+        <div>
+            <ul class="mainMenu">
+                <li><a href="#">BOLLYWOOD</a></li>
+                <li><a href="#">TOLLYWOOD</a></li>
+                <li><a href="#">HOLLYWOOD</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div> 
             </ul>
-            <div class="searchbar">
-                <form>
-                    <input type="text" placeholder="Search" id="search" class="search">
-                </form>
-            </div>
-        </nav>
+        </div>
+     </nav>
+    
+           <div class="container">
+              <img src="image-3.jpeg" class="image">
+           </div>
+           <div class="intro">
+              <h1 id="short">MDBA</h1> 
+              <h1 id="name">Movie Database Alternative</h1> 
+              <p id="desp">Having problem in choosing a movie of your choice? No worries...You are at the right place.<br> Find out the top rated latest movies here and grab your popcorn to watch it with your loved ones!!</p>
+             <div class="searchbar">
+              <form action="">
+                <input type="text" placeholder="Search" id="search" class="search">
+                <button class="searchbtn"type="submit"><i class="fas fa-search"></i></button>
+              </form>
+             </div>
+           </div>    
     </header>
-    <main class="content">
+    <main id="content">
         <div class="cards">
             <img src="form (1).jpeg" alt="movie image">
             <div class="movieinfo">
@@ -121,9 +138,12 @@
             </div>
         </div>
     </main>
-    </header>
+    <section id="footer">
+        <p>Made by - Aswathi M, Anugya Baraik, Leher Ku. Kachhyap, Sugyani Manjari Dash</p>
+        <p>©2022</p>
+    </section>
     <footer>
-        <h4>Made by - .....</h4>
+        
     </footer>
 </body>
 </html>
