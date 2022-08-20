@@ -15,7 +15,7 @@ body::-webkit-scrollbar-track {
 } 
 body::-webkit-scrollbar-thumb {
   background-color:rgb(10, 53, 81) ;
-  /*outline: 1px solid rgb(234, 190, 242);*/
+  
 }
 :root{
     --dark:rgb(20, 93, 142);
@@ -209,6 +209,8 @@ body::-webkit-scrollbar-thumb {
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
+    padding: 16rem;
+    gap:4rem;
 }
 
 div.cards{
