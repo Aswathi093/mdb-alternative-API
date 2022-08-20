@@ -1,33 +1,3 @@
-const mainMenu = document.querySelector('.mainMenu');
-const closeMenu = document.querySelector('.closeMenu');
-const openMenu = document.querySelector('.openMenu');
-const menu_items = document.querySelectorAll('nav .mainMenu li a');
-
-
-
-
-openMenu.addEventListener('click',show);
-closeMenu.addEventListener('click',close);
-
-// close menu when you click on a menu item 
-menu_items.forEach(item => {
-    item.addEventListener('click',function(){
-        close();
-    })
-})
-
-function show(){
-    mainMenu.style.display = 'flex';
-    mainMenu.style.top = '0';
-}
-
-function close(){
-    mainMenu.style.top = '-100%';
-    mainMenu.style.display = 'none';
-   
-}
-
-
 
 //fetching api
 const API_KEY = '6c915d8cb8598277067b0da21d0c7cd4' ;
@@ -83,7 +53,7 @@ form.addEventListener('submit' , (e) => {
     }
 })
 
-/genres
+//genres
 const genres = [
     {
       "id": 28,
@@ -101,10 +71,10 @@ const genres = [
       "id": 35,
       "name": "Comedy"
     },
-    {
+    /*{
    "id": 80,
    "name": "Crime"
- },
+ },*/
  {
    "id": 99,
       "name": "Documentary"
