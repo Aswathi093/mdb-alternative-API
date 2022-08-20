@@ -1,7 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-}
+
 body{
     background-color: var(--lighter);
     margin: 0;
@@ -123,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     }
     .image{
         width: 100%;
-        height:90vh;
+        height:100vh;
         position: absolute;
         flex-wrap: wrap;
         display: flex;
@@ -143,11 +140,13 @@ body::-webkit-scrollbar-thumb {
       font-family: 'Kanit', sans-serif;
       font-weight: 700;
       padding: 0;
+      margin-bottom: 0;
     }
     #name{
       font-family: 'Poppins', sans-serif;
       padding: 0;
       font-weight: 8px;
+      margin: 0;
     }
     #desp{
       font-size: 1.1rem;
@@ -209,62 +208,64 @@ body::-webkit-scrollbar-thumb {
     display:flex;
     flex-wrap: wrap;
     justify-content:center;
-    padding: 16rem;
+    padding-top: 19rem;
     gap:4rem;
+   
 }
 
-div.cards{
-    padding:10px;
-    margin:10px;
-
-}
 .cards{
     position:relative;
-    width:155px;
+    width: 254px;
+    height:100%;
     perspective:1000px;
-
+    background:  var(--dark);
+    border-radius:10px; 
+    color: rgb(211, 221, 231);
+    padding: .4rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
 }
 .cards img{
     transform:rotateY(0);
     transition: all 0.5s ease-in-out 0s;
 }
+
 .cards:hover img{
     transform:rotateY(-90deg);
 }
-
 .cards img{
-    width:150px;
-    height:230px;
-    border:2px solid rgb(12, 12, 14);
+    width:255px;
+    height:330px;
     border-radius:10px; 
 }
-.cards .movieinfo {
-    color:rgb(245, 242, 242);
-    background:rgba(9, 134, 159, 0.8);
+.cards .description {
+    background:rgba(13, 158, 187, 0.8);
     top:0;
     left:0;
     width:100%;
     height:100%;
     position:absolute;
-    padding:5px 5px;
     box-sizing: border-box;
-    text-align: centre;
+    padding: 2rem;
     border-radius:10px;
     transform:rotateY(90deg);
     transition: all 0.5s ease-in-out 0s;
+    color: black; 
 }
 
-.cards:hover .movieinfo{
-    transform:rotateY(0);
-    
+.cards:hover .description{
+    transform:rotateY(0);  
+}
+.description{
+ font-family: 'poppins',sans-serif;
+}
+.movieinfo{
+  padding: .9rem;
+  font-family: 'poppins',sans-serif;
 }
 
-.cards .movieinfo .description{
-    border-top:1px solid rgb(11, 8, 8);
-    border-bottom:1px solid rgb(6, 4, 4);
-    padding:10px 0;
-    margin:0 25px;
-}
 /*-----------------------footer---------------------*/
 #footer{
   background: var(--dark);
@@ -273,6 +274,7 @@ div.cards{
 padding: 7.5rem;
 text-align: center;
 font-size: large;
+margin-top: 9rem;
 word-spacing: 3px;
 
 }

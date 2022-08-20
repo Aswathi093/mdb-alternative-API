@@ -56,9 +56,8 @@ function ShowMovies(data){
         <img src="${IMG_URL+poster_path}" alt="${title}">
             <div class="movieinfo">
                 <h3>${title}</h3>
-                <span class="rating">${vote_average}</span>
-                <h4>Genre</h4>
-                <span>${release_date}</span>
+                <span class="rating">Rating:  ${vote_average}<br></span>
+                <span>Release date: ${release_date}</span>
             </div>
             <div class="description">
                 ${overview}
