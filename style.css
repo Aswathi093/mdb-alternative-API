@@ -1,0 +1,220 @@
+
+body{
+    background-color: var(--lighter);
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 1em;
+} 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+} 
+body::-webkit-scrollbar-thumb {
+  background-color:rgb(10, 53, 81) ;
+  
+}
+:root{
+    --dark:rgb(20, 93, 142);
+    --lighter:#DEF2F1;
+}
+#logo{
+    height:3rem;
+    width: 3rem;
+    padding: 1.5rem;
+    padding-left: 24px; 
+  }
+  nav{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width:100%;
+    background: black;
+    border-bottom: 1px solid rgb(37, 36, 36);
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+  }
+ /*-----------------------filter---------------*/
+#tags{
+  width:80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.tag{
+  color:black;
+  padding: 10px 15px;
+  background: var(--lighter);
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 5px;
+  display: inline-block;
+}
+.tag.highlight{
+  background-color: var(--dark);
+}
+
+    .image{
+        width: 100%;
+        height:100vh;
+        position: absolute;
+        flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        object-fit: fill;
+    }
+    .intro{
+      position: relative;
+    padding-top: 8rem;
+    padding-left: 7rem;
+    
+    }
+    #short{
+      font-size: 6rem;
+      letter-spacing: 2px;
+      font-family: 'Kanit', sans-serif;
+      font-weight: 700;
+      padding: 0;
+      margin-bottom: 0;
+    }
+    #name{
+      font-family: 'Poppins', sans-serif;
+      padding: 0;
+      font-weight: 8px;
+      margin: 0;
+    }
+    #desp{
+      font-size: 1.1rem;
+      padding-top: .7rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color:black;
+    }
+    @media (max-width: 1200px) {
+    .image{
+      opacity: .75;
+    }
+    .intro{
+      padding: 3rem;
+    }
+  }
+  .searchbar{
+    margin-top: 3rem;
+    background: rgb(24, 112, 171);
+    padding: .2rem;
+    border-radius: 50px;
+    font-family: poppins,sans-serif;
+    width:16rem;
+  height:2.7rem;
+  }
+  .search{
+    background:rgb(24, 112, 171);
+    border: 0;
+    width:74%;
+    color:white;
+    font-size:1rem ;
+    padding: 5px;
+    padding-left: .5rem;
+  }
+.searchbtn{
+    background: transparent;
+    height:35px;
+    width:35px;
+    border: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    background:  rgb(20, 93, 142);
+    margin-left: .6rem;
+    margin-top: .2rem;
+  }
+  .searchbtn:focus{
+    background: rgb(14, 68, 104) ;
+  }
+  .search:focus{
+    outline: 0;
+  }
+  .search::placeholder{
+    color: black;
+    font-size: 15px;
+    padding-left: 7px;
+    cursor: pointer; 
+  }
+  /*----------------------cards------------------*/
+  main{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    padding-top: 19rem;
+    gap:4rem;
+   
+}
+
+.cards{
+    position:relative;
+    width: 254px;
+    height:100%;
+    perspective:1000px;
+    background:  var(--dark);
+    border-radius:10px; 
+    color: rgb(211, 221, 231);
+    padding: .4rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+.cards img{
+    transform:rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.cards:hover img{
+    transform:rotateY(-90deg);
+}
+.cards img{
+    width:255px;
+    height:330px;
+    border-radius:10px; 
+}
+.cards .description {
+    background:rgba(13, 158, 187, 0.8);
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    position:absolute;
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius:10px;
+    transform:rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+    color: black; 
+}
+
+.cards:hover .description{
+    transform:rotateY(0);  
+}
+.description{
+ font-family: 'poppins',sans-serif;
+}
+.movieinfo{
+  padding: .9rem;
+  font-family: 'poppins',sans-serif;
+}
+
+/*-----------------------footer---------------------*/
+#footer{
+  background: var(--dark);
+  color: white;
+  font-family:'poppins',sans-serif;
+padding: 7.5rem;
+text-align: center;
+font-size: large;
+margin-top: 9rem;
+word-spacing: 3px;
+
+}
