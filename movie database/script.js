@@ -82,3 +82,124 @@ form.addEventListener('submit' , (e) => {
         GetMovies(API_URL);
     }
 })
+
+/genres
+const genres = [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Adventure"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 35,
+      "name": "Comedy"
+    },
+    {
+   "id": 80,
+   "name": "Crime"
+ },
+ {
+   "id": 99,
+      "name": "Documentary"
+ },
+ {
+   "id": 18,
+   "name": "Drama"
+    },
+    {
+   "id": 10751,
+   "name": "Family"
+ },
+ {
+   "id": 14,
+      "name": "Fantasy"
+    },
+ {
+   "id": 36,
+   "name": "History"
+ },
+    {
+      "id": 27,
+      "name": "Horror"
+    },
+ {
+   "id": 10402,
+   "name": "Music"
+ },
+ {
+   "id": 9648,
+       "name": "Mystery"
+     },
+     {
+       "id": 10749,
+       "name": "Romance"
+     },
+    {
+      "id": 878,
+      "name": "Science Fiction"
+    },
+     {
+       "id": 10770,
+       "name": "TV Movie"
+     },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+     {
+       "id": 10752,
+       "name": "War"
+     },
+     {
+       "id": 37,
+       "name": "Western"
+     }
+  ]
+  var selectedgenre = [];
+const genreEl = document.getElementById('mainMenu');
+setgenres()
+function setgenres(){
+  genreEl.innerHTML = '';
+  genres.forEach(genres => {
+    const t = document.createElement('div');
+    t.classList.add('tag');
+    t.id=genres.id;
+    t.innerText=genres.name;
+    t.addEventListener('click', ()=>{
+        if(selectedgenre.length == 0){
+          selectedgenre.push(genres.id);
+        }
+        else{
+          if(selectedgenre.includes(genres.id)){
+            selectedgenre.forEach((id, idx) =>{
+              if(id==genres.id){
+                selectedgenre.splice(idx, 1);
+              }
+            })
+          }
+          else{
+            selectedgenre.push(genres.id);
+          }
+        }
+        console.log(selectedgenre);
+        GetMovies(API_URL+'&with_genres='+encodeURI(selectedgenre.join(',')))
+    })
+    genreEl.append(t);
+  })
+}
+
+function highlight(){
+  if(selectedgenre.length !=0){
+    selectedgenre.forEach(id =>{
+      const highlightedtag = document.getElementById(id);
+      highlightedtag.classList.add('highlight');
+    })
+  }
+}

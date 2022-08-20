@@ -53,7 +53,9 @@ body::-webkit-scrollbar-thumb {
   margin: 5px;
   display: inline-block;
 }
-
+.tag.highlight{
+  background: var(--dark);
+}
 
     .image{
         width: 100%;
