@@ -66,3 +66,19 @@ function ShowMovies(data){
         main.appendChild(movieElement);
     });
 }
+//search
+const form = document.getElementById('form');
+const search = document.getElementById('search');
+const Search_URL = 'https://api.themoviedb.org/3/search/movie?api_key=6c915d8cb8598277067b0da21d0c7cd4&language=en-US&page=1&include_adult=false&query=';
+
+form.addEventListener('submit' , (e) => {
+    e.preventDefault()
+    const searchterm = search.value;
+    if(searchterm){
+        GetMovies(Search_URL+searchterm)
+        console.log(search);
+    }
+    else{
+        GetMovies(API_URL);
+    }
+})
