@@ -36,7 +36,8 @@ body::-webkit-scrollbar-thumb {
     position:sticky;
   }
  /*-----------------------filter---------------*/
-#tags{
+
+#mainMenu{
   width:80%;
   display: flex;
   flex-wrap: wrap;
@@ -52,10 +53,13 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
   margin: 5px;
   display: inline-block;
+  
 }
 .tag.highlight{
-  background: var(--dark);
+  background-color:rgba(13, 158, 187, 0.8) ;
 }
+
+/*===================================================*/
 
     .image{
         width: 100%;

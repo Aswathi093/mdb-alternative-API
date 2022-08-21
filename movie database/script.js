@@ -75,10 +75,10 @@ const genres = [
    "id": 80,
    "name": "Crime"
  },*/
- {
+ /*{
    "id": 99,
       "name": "Documentary"
- },
+ },*/
  {
    "id": 18,
    "name": "Drama"
@@ -91,7 +91,7 @@ const genres = [
    "id": 14,
       "name": "Fantasy"
     },
- {
+ /*{
    "id": 36,
    "name": "History"
  },
@@ -110,7 +110,7 @@ const genres = [
      {
        "id": 10749,
        "name": "Romance"
-     },
+     },*/
     {
       "id": 878,
       "name": "Science Fiction"
@@ -127,10 +127,10 @@ const genres = [
        "id": 10752,
        "name": "War"
      },
-     {
+     /*{
        "id": 37,
        "name": "Western"
-     }
+     }*/
   ]
   var selectedgenre = [];
 const genreEl = document.getElementById('mainMenu');
@@ -160,12 +160,18 @@ function setgenres(){
         }
         console.log(selectedgenre);
         GetMovies(API_URL+'&with_genres='+encodeURI(selectedgenre.join(',')))
-    })
+        highlightSelection();
+      })
     genreEl.append(t);
   })
 }
 
-function highlight(){
+function highlightSelection(){
+  const tags= document.querySelectorAll('.tag');
+  tags.forEach(tag =>{
+    tag.classList.remove('highlight');
+  })
+ //clearBtn();
   if(selectedgenre.length !=0){
     selectedgenre.forEach(id =>{
       const highlightedtag = document.getElementById(id);
@@ -173,3 +179,23 @@ function highlight(){
     })
   }
 }
+
+/*function clearBtn(){
+  let clearBtn= document.getElementById('clear');
+  if(clearBtn){
+   clearBtn.classList.add('highlight');
+  }else{
+    let clear = document.createElement('div');
+  clear.classList.add('tag','hightlight');
+  clear.id ='clear';
+  clear.innerText='Clear x';
+  clear.addEventListener('click',()=>{
+    selectedgenre=[];
+    setgenres();
+    getMovies(API_URL);
+
+  })
+  tagsEl.append(clear);
+  }
+  
+}*/
