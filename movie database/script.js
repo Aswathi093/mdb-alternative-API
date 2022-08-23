@@ -23,7 +23,7 @@ function ShowMovies(data){
         const movieElement = document.createElement('div');
         movieElement.classList.add('cards');
         movieElement.innerHTML = `
-        <img src="${IMG_URL+poster_path}" alt="${title}">
+        <img src="${poster_path? IMG_URL+poster_path: "http://via.placeholder.com/1080x1580"}" alt="${title}">
             <div class="movieinfo">
                 <h3>${title}</h3>
                 <span class="rating">Rating:  ${vote_average}<br></span>
